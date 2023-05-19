@@ -1,0 +1,23 @@
+CREATE TABLE `categories` (
+	`category_name` varchar NOT NULL,
+	`tutor_ids` TEXT NOT NULL,
+	PRIMARY KEY (`category_name`)
+);
+
+CREATE TABLE `users` (
+	`user_id` INT NOT NULL,
+	`tg_name` varchar NOT NULL,
+	`user_balance` INT NOT NULL,
+	`user_role` varchar NOT NULL,
+	PRIMARY KEY (`user_id`)
+);
+
+CREATE TABLE `tutor` (
+	`tutor_id` INT NOT NULL AUTO_INCREMENT,
+	`tutor_name` varchar NOT NULL,
+	`tutor_description` TEXT NOT NULL,
+	`tutor_price_hour` INT NOT NULL,
+	`tutor_reviews_score` FLOAT NOT NULL,
+	`tutor_reviews_count` INT NOT NULL,
+	PRIMARY KEY (`tutor_id`)
+);
